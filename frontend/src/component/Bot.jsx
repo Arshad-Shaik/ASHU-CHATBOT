@@ -2,6 +2,9 @@ import React, { useEffect, useState, useRef, useCallback } from 'react'
 import axios from 'axios'
 
 function Bot() {
+
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4002";
+
     // ✅ Load messages from sessionStorage (persists on refresh, clears on tab close)
     const [messages, setMessages] = useState(() => {
         const saved = sessionStorage.getItem('chatMessages')
@@ -436,7 +439,7 @@ function Bot() {
         setLoading(true)
 
         try {
-            const res = await axios.post("http://localhost:4002/bot/v1/message", {
+            const res = await axios.post(`${API_URL}/bot/v1/message`, {
                 text: userInput
             })
 
