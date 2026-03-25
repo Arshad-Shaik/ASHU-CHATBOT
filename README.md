@@ -126,44 +126,79 @@
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### Frontend
+---
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| React.js | 19.x | UI Library (Component-based) |
-| Vite | 6.x | Build tool & Dev server |
-| Tailwind CSS | 3.x | Utility-first CSS framework |
-| Axios | 1.x | HTTP client for API calls |
-| React Icons | 5.x | Icon library |
-| JavaScript (ES6+) | - | Programming language |
-| CSS3 | - | Custom animations & Glassmorphism |
-| Web Speech API | - | Text-to-Speech synthesis |
-| Session Storage | - | Client-side data persistence |
+## 🎨 Frontend
 
-### Backend
+| Logo | Technology | Version | Purpose |
+|:----:|-----------|:-------:|---------|
+| <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> | **React.js** | `19.x` | UI Library (Component-based) |
+| <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" /> | **Vite** | `6.x` | Build tool & Dev server |
+| <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" /> | **Tailwind CSS** | `3.x` | Utility-first CSS framework |
+| <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white" /> | **Axios** | `1.x` | HTTP client for API calls |
+| <img src="https://img.shields.io/badge/React_Icons-E91E63?style=for-the-badge&logo=react&logoColor=white" /> | **React Icons** | `5.x` | Icon library |
+| <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> | **JavaScript (ES6+)** | `-` | Programming language |
+| <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> | **CSS3** | `-` | Custom animations & Glassmorphism |
+| <img src="https://img.shields.io/badge/Web_Speech_API-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" /> | **Web Speech API** | `-` | Text-to-Speech synthesis |
+| <img src="https://img.shields.io/badge/Session_Storage-FF6F00?style=for-the-badge&logo=databricks&logoColor=white" /> | **Session Storage** | `-` | Client-side data persistence |
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| Node.js | 20.x | JavaScript runtime |
-| Express.js | 4.x | Web framework for REST API |
-| MongoDB | 7.x | NoSQL database |
-| Mongoose | 8.x | MongoDB ODM (Object Data Modeling) |
-| CORS | 2.x | Cross-Origin Resource Sharing |
-| dotenv | 16.x | Environment variable management |
-| Nodemon | 3.x | Auto-restart dev server |
+---
 
-### DevOps & Deployment
+## ⚙️ Backend
 
-| Technology | Purpose |
-|-----------|---------|
-| Git & GitHub | Version control & code hosting |
-| Vercel | Frontend & Backend deployment |
-| Docker | Containerization |
-| Postman | API testing |
-| npm | Package management |
+| Logo | Technology | Version | Purpose |
+|:----:|-----------|:-------:|---------|
+| <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /> | **Node.js** | `20.x` | JavaScript runtime |
+| <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" /> | **Express.js** | `4.x` | Web framework for REST API |
+| <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" /> | **MongoDB** | `7.x` | NoSQL database |
+| <img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white" /> | **Mongoose** | `8.x` | MongoDB ODM (Object Data Modeling) |
+| <img src="https://img.shields.io/badge/CORS-0096FF?style=for-the-badge&logo=fastify&logoColor=white" /> | **CORS** | `2.x` | Cross-Origin Resource Sharing |
+| <img src="https://img.shields.io/badge/dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black" /> | **dotenv** | `16.x` | Environment variable management |
+| <img src="https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white" /> | **Nodemon** | `3.x` | Auto-restart dev server |
 
+---
+
+## 🚀 DevOps & Deployment
+
+| Logo | Technology | Purpose |
+|:----:|-----------|---------|
+| <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" /> | **Git** | Version control |
+| <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /> | **GitHub** | Code hosting & collaboration |
+| <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" /> | **Vercel** | Frontend & Backend deployment |
+| <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /> | **Docker** | Containerization |
+| <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" /> | **Postman** | API testing |
+| <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" /> | **npm** | Package management |
+
+---
+
+## 📊 Quick Tech Overview
+
+<div align="center">
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![dotenv](https://img.shields.io/badge/dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)
+![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)
+
+</div>
+
+---
 ---
 
 ## 🏗️ Project Architecture
