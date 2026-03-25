@@ -172,18 +172,8 @@
 
 
 ### Request-Response Flow:
-User types "What is React?" → Clicks SEND
-React (Frontend) → axios.POST → http://localhost:4002/bot/v1/message
-Express (Backend) → Receives { text: "What is React?" }
-Controller → Saves user message to MongoDB (Users collection)
-Controller → Matches text with botResponses object
-Controller → Finds response for "what is react"
-Controller → Saves bot response to MongoDB (Bots collection)
-Controller → Returns JSON { userMessage, botMessage }
-React (Frontend) → Receives response
-React → Shows "thinking" animation for 1.5-3 seconds
-React → Displays bot response with timestamp
 
+![Response Work Flow](image-2.png)
 
 ---
 
@@ -267,5 +257,6 @@ Replace <dbname> with ashu-chatbot
 
 
 
-
+## ▶️ Running the Application
+Start Backend Server:
 
