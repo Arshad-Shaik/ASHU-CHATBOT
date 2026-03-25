@@ -99,7 +99,6 @@
 - ✅ Holographic Glassmorphism UI (Blue + Red theme)
 - ✅ Spark border animations on header, footer, and robot avatar
 - ✅ TypeWriter welcome message effect (one-time only)
-- ✅ Custom holographic cursor with spark trail
 - ✅ User messages with redish holographic background
 - ✅ Bot messages with blueish holographic background
 - ✅ "Ashu-Bot is thinking..." animation with bouncing dots
@@ -345,7 +344,9 @@ Content-Type: application/json
 # 🧪 API Testing with Postman
 
 ## Step 1: Download & Install Postman
-Download from: https://www.postman.com/downloads/
+Download from: https://www.postman.com/downloads/ 
+
+### or else - use Postman Extension via VS Code -> Just search in extensions tab from your left panel and search 'Postman' click on Install and use it, create new request and test your Backend API.
 
 ## Step 2: Create a New Request
 Method:   POST
