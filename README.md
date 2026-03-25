@@ -200,7 +200,6 @@ Before running this project, make sure you have the following installed:
 
 ### Verify Installation:
 
-```bash
 node -v          # Should show v20.x.x or higher
 npm -v           # Should show v10.x.x or higher
 git --version    # Should show git version 2.x.x
@@ -246,7 +245,7 @@ MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
 
 
 
-How to Get MongoDB URI:
+## How to Get MongoDB URI:
 Go to MongoDB Atlas
 Create a free account
 Create a new cluster (free tier)
@@ -255,8 +254,10 @@ Copy the connection string
 Replace <password> with your actual password
 Replace <dbname> with ashu-chatbot
 
-
+---
 
 ## ▶️ Running the Application
-Start Backend Server:
+### Start Backend Server:
+
+
 
