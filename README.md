@@ -208,7 +208,7 @@ docker --version # (Optional) Should show Docker version 24.x.x
 
 ## 🚀 Installation & Setup
 
-### Step 1: Clone the Repository
+## Step 1: Clone the Repository
 
 git clone https://github.com/YOUR_USERNAME/ashu-chatbot.git
 cd ashu-chatbot
@@ -284,8 +284,8 @@ http://localhost:5173
 http://localhost:4002/bot/v1
 
 ## Endpoints
-Method	Endpoint	Description	Request Body	Response
-POST	/message	Send a message to the chatbot	{ "text": "hello" }	{ "success": true, "userMessage": "hello", "botMessage": "Hi, How I can help you!!" }
+
+![Endpoints](image-3.png)
 
 
 
