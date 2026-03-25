@@ -206,58 +206,97 @@ git --version    # Should show git version 2.x.x
 docker --version # (Optional) Should show Docker version 24.x.x
 
 
-🚀 Installation & Setup
-Step 1: Clone the Repository
+## 🚀 Installation & Setup
+
+### Step 1: Clone the Repository
+
 git clone https://github.com/YOUR_USERNAME/ashu-chatbot.git
 cd ashu-chatbot
 
 
 
-Step 2: Setup Backend
-# Navigate to backend folder
+## Step 2: Setup Backend
+### Navigate to backend folder
 cd backend
 
-# Install dependencies
+## Install dependencies
 npm install
 
-# Create .env file
+## Create .env file
 touch .env
 
 
 
-Step 3: Setup Frontend
-# Navigate to frontend folder (from root)
+## Step 3: Setup Frontend
+### Navigate to frontend folder (from root)
 cd ../frontend
 
-# Install dependencies
+## Install dependencies
 npm install
 
 
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 Create a .env file inside the backend/ folder:
 
-# Server Configuration
+## Server Configuration
 PORT=YOUR_PORT_NUMBER
 
-# MongoDB Connection String
+## MongoDB Connection String
 MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
 
 
-
 ## How to Get MongoDB URI:
-Go to MongoDB Atlas
-Create a free account
-Create a new cluster (free tier)
-Click "Connect" → "Connect your application"
-Copy the connection string
-Replace <password> with your actual password
-Replace <dbname> with ashu-chatbot
+- Go to MongoDB Atlas
+- Create a free account
+- Create a new cluster (free tier)
+- Click "Connect" → "Connect your application"
+- Copy the connection string
+- Replace <password> with your actual password
+- Replace <dbname> with ashu-chatbot
 
 ---
 
 ## ▶️ Running the Application
 ### Start Backend Server:
+cd backend
+npm run dev
+
+### Expected output:
+Backend Server application listening on port 4002
+Connected to MongoDB
+
+## Start Frontend Server:
+cd frontend
+npm run dev
+
+## Expected output:
+  VITE v6.x.x  ready in 500ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.x.x:5173/
+
+## Open in Browser:
+http://localhost:5173
+
+## 📡 API Documentation
+### Base URL
+http://localhost:4002/bot/v1
+
+## Endpoints
+Method	Endpoint	Description	Request Body	Response
+POST	/message	Send a message to the chatbot	{ "text": "hello" }	{ "success": true, "userMessage": "hello", "botMessage": "Hi, How I can help you!!" }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
