@@ -206,7 +206,7 @@ git --version    # Should show git version 2.x.x
 docker --version # (Optional) Should show Docker version 24.x.x
 
 
-## 🚀 Installation & Setup
+# 🚀 Installation & Setup
 
 ## Step 1: Clone the Repository
 
@@ -287,16 +287,91 @@ http://localhost:4002/bot/v1
 
 ![Endpoints](image-3.png)
 
+## Request Format:
+POST /bot/v1/message HTTP/1.1
+Host: localhost:4002
+Content-Type: application/json
+
+{
+    "text": "what is react"
+}
+
+## Success Response (200 OK):
+{
+    "success": true,
+    "userMessage": "what is react",
+    "botMessage": "React.js is a JavaScript library for building user interfaces, developed by Facebook (Meta).\n• Component-based architecture...\n• Uses Virtual DOM for efficient re-rendering..."
+}
+
+## Error Responses:
+![Error-Responses](image-4.png)
 
 
+# 🧪 API Testing with Postman
 
+## Step 1: Download & Install Postman
+Download from: https://www.postman.com/downloads/
 
+## Step 2: Create a New Request
+Method:   POST
+URL:      http://localhost:4002/bot/v1/message
 
+## Step 3: Set Headers
+Key:      Content-Type
+Value:    application/json
 
+## Step 4: Set Body
+→ Select "Body" tab
+→ Select "raw"
+→ Select "JSON" from dropdown
+→ Enter:
 
+{
+    "text": "hello"
+}
 
+## Step 5: Click "Send"
 
+## Step 6: Verify Response
+{
+    "success": true,
+    "userMessage": "hello",
+    "botMessage": "Hi, How I can help you!!"
+}
 
+## Test Cases:
+![Test Cases](image-5.png)
 
+# 🗄️ Database Schema
+## Users Collection
+
+{
+    _id: ObjectId("..."),
+    sender: "user",              // String, default: "user"
+    text: "what is react",       // String, required
+    createdAt: ISODate("..."),   // Auto-generated
+    updatedAt: ISODate("...")    // Auto-generated
+}
+
+## Bots Collection
+{
+    _id: ObjectId("..."),
+    text: "React.js is a JavaScript library...",  // String, required
+    createdAt: ISODate("..."),   // Auto-generated
+    updatedAt: ISODate("...")    // Auto-generated
+}
+
+# 🎨 UI/UX Design Details
+## Color Palette
+
+![UI/UX Design Details](image-6.png)
+
+# Typography
+![Typography](image-7.png)
+
+# Animations
+![Animations](image-8.png)
+
+# 
 
 
