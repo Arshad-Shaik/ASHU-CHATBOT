@@ -244,7 +244,7 @@ docker --version # (Optional) Should show Docker version 24.x.x
 
 ## Step 1: Clone the Repository
 
-git clone https://github.com/YOUR_USERNAME/ashu-chatbot.git
+git clone https://github.com/Arshad-Shaik/ASHU-CHATBOT.git
 cd ashu-chatbot
 
 
