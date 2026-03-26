@@ -130,7 +130,7 @@ const port = process.env.PORT || 4002;
 // Middleware
 app.use(cors({
     origin: [
-        'https://your-frontend.vercel.app',  // ← Your frontend URL
+        'https://ashu-chatbot.vercel.app/',  // ← Your frontend URL
         'http://localhost:5173'
     ],
     methods: ['GET', 'POST'],
