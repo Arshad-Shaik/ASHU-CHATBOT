@@ -382,8 +382,31 @@
 
 
 
+// backend/controllers/chatbot.message.js
 import Bot from '../models/bot.model.js';
 import User from '../models/user.model.js';
+
+// ✅ Auto-delete function: keeps only latest 100 documents
+async function autoCleanup(Model, maxDocs = 100) {
+    try {
+        const count = await Model.countDocuments();
+        if (count > maxDocs) {
+            // Find the oldest documents that exceed the limit
+            const docsToDelete = count - maxDocs;
+            const oldDocs = await Model.find()
+                .sort({ timestamp: 1 })  // oldest first
+                .limit(docsToDelete)
+                .select('_id');
+            
+            const idsToDelete = oldDocs.map(doc => doc._id);
+            await Model.deleteMany({ _id: { $in: idsToDelete } });
+            console.log(`Auto-deleted ${docsToDelete} old documents from ${Model.modelName}`);
+        }
+    } catch (error) {
+        console.error(`Auto-cleanup failed for ${Model.modelName}:`, error.message);
+        // Non-critical — don't crash
+    }
+}
 
 export const Message = async (req, res) => {
     try {
@@ -417,9 +440,10 @@ export const Message = async (req, res) => {
                 sender: "user",
                 text: text.trim()
             });
+            // ✅ Auto-delete old user messages if more than 100
+            await autoCleanup(User, 100);
         } catch (dbError) {
             console.error("User save failed (non-critical):", dbError.message);
-            // Don't crash — continue to send bot reply
         }
 
         // ✅ Bot responses data
@@ -728,9 +752,10 @@ export const Message = async (req, res) => {
             await Bot.create({
                 text: botReply
             });
+            // ✅ Auto-delete old bot messages if more than 100
+            await autoCleanup(Bot, 100);
         } catch (dbError) {
             console.error("Bot save failed (non-critical):", dbError.message);
-            // Don't crash — continue to send bot reply
         }
 
         console.log("Bot Reply:", botReply.substring(0, 50) + "...");

@@ -115,11 +115,11 @@
 
 
 
-// backend/index.js (Update with db.js and below use your frontend url which you deployed in vercel)
+// backend/index.js
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import connectDB from './db.js';
+import mongoose from 'mongoose';
 import chatbotRoutes from './routes/chatbot.route.js';
 
 dotenv.config();
@@ -127,33 +127,51 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 4002;
 
-// Middleware
+// ✅ CORS — this single line handles EVERYTHING including preflight OPTIONS
 app.use(cors({
     origin: [
-        'https://ashu-chatbot.vercel.app/',  // ← Your frontend URL
-        'http://localhost:5173'
+        'https://ashu-chatbot.vercel.app',
+        'http://localhost:5173',
+        'http://localhost:5174'
     ],
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
+
+// ✅ Body parsers
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ Connect to MongoDB BEFORE handling any request (middleware)
+// ✅ MongoDB Connection
+const connectDB = async () => {
+    try {
+        if (mongoose.connection.readyState === 1) {
+            return;
+        }
+        await mongoose.connect(process.env.MONGO_URI);
+        console.log('✅ MongoDB connected successfully');
+    } catch (error) {
+        console.error('❌ MongoDB connection error:', error.message);
+    }
+};
+
+connectDB();
+
+// ✅ Reconnect on each request (for Vercel serverless)
 app.use(async (req, res, next) => {
     try {
-        await connectDB();
+        if (mongoose.connection.readyState !== 1) {
+            await connectDB();
+        }
         next();
     } catch (error) {
-        console.error('Database connection failed:', error);
-        return res.status(500).json({
-            success: false,
-            error: 'Database connection failed. Please try again.'
-        });
+        console.error('DB middleware error:', error.message);
+        next();
     }
 });
 
-// Health check route
+// ✅ Health check
 app.get('/', (req, res) => {
     res.status(200).json({
         message: '🤖 ASHU THE GREAT CHATBOT API is running!',
@@ -162,15 +180,14 @@ app.get('/', (req, res) => {
     });
 });
 
-// Routes
+// ✅ Routes
 app.use('/bot/v1/', chatbotRoutes);
 
-// Local development only
+// ✅ Local development only
 if (!process.env.VERCEL) {
     app.listen(port, () => {
-        console.log(`Server listening on port ${port}`);
+        console.log(`🚀 Server listening on port ${port}`);
     });
 }
 
 export default app;
-
