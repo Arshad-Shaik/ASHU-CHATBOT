@@ -444,9 +444,8 @@ See [Vercel Section](https://vercel.com/docs/deployments) below for full details
 
 ## ❗ req.body is undefined
 👉 Add this before your routes:
-```js
+
 app.use(express.json());
-`
 
 ##❗ White blank page
 👉 Check browser console (F12)
