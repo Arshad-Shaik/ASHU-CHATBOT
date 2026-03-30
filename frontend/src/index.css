@@ -336,3 +336,829 @@
         cursor: auto !important;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================ */
+/* 🔓 DIGITAL MATRIX DECODE — Name Reveal Animation                */
+/* ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
+
+/* ✅ Main Overlay */
+.decode-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #040810;
+    animation: decodeOverlayIn 0.8s ease forwards;
+}
+
+@keyframes decodeOverlayIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ✅ Fadeout */
+.decode-fadeout {
+    animation: decodeFadeout 1.5s ease-in-out forwards !important;
+}
+
+@keyframes decodeFadeout {
+    0% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+    40% {
+        opacity: 1;
+        filter: brightness(2);
+    }
+    100% {
+        opacity: 0;
+        filter: brightness(3);
+        pointer-events: none;
+    }
+}
+
+/* ================================================================ */
+/* 🔲 BACKGROUND GRID                                               */
+/* ================================================================ */
+.decode-grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.04;
+    background-image:
+        linear-gradient(rgba(0, 180, 255, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 180, 255, 0.3) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridScroll 20s linear infinite;
+}
+
+@keyframes gridScroll {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, 40px); }
+}
+
+/* ================================================================ */
+/* 📺 SCAN LINES                                                    */
+/* ================================================================ */
+.decode-scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.03;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 180, 255, 0.1) 2px,
+        rgba(0, 180, 255, 0.1) 4px
+    );
+}
+
+/* ================================================================ */
+/* ➖ HORIZONTAL ACCENT LINES                                       */
+/* ================================================================ */
+.decode-h-line {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    z-index: 2;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0, 150, 255, 0.1) 15%,
+        rgba(0, 200, 255, 0.5) 50%,
+        rgba(0, 150, 255, 0.1) 85%,
+        transparent 100%
+    );
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.2);
+    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.decode-h-line-bottom {
+    top: auto;
+    bottom: 42%;
+}
+
+.decode-h-line-expand {
+    width: 80%;
+}
+
+/* ================================================================ */
+/* 📐 CORNER BRACKETS                                               */
+/* ================================================================ */
+.decode-corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    opacity: 0;
+    animation: cornerFadeIn 0.5s ease 1s forwards;
+}
+
+@keyframes cornerFadeIn {
+    to { opacity: 0.4; }
+}
+
+.decode-corner-tl {
+    top: 8%;
+    left: 6%;
+    border-top: 2px solid rgba(0, 180, 255, 0.5);
+    border-left: 2px solid rgba(0, 180, 255, 0.5);
+}
+
+.decode-corner-tr {
+    top: 8%;
+    right: 6%;
+    border-top: 2px solid rgba(0, 180, 255, 0.5);
+    border-right: 2px solid rgba(0, 180, 255, 0.5);
+}
+
+.decode-corner-bl {
+    bottom: 8%;
+    left: 6%;
+    border-bottom: 2px solid rgba(0, 180, 255, 0.5);
+    border-left: 2px solid rgba(0, 180, 255, 0.5);
+}
+
+.decode-corner-br {
+    bottom: 8%;
+    right: 6%;
+    border-bottom: 2px solid rgba(0, 180, 255, 0.5);
+    border-right: 2px solid rgba(0, 180, 255, 0.5);
+}
+
+/* ================================================================ */
+/* 📊 STATUS BAR                                                     */
+/* ================================================================ */
+.decode-status-bar {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: clamp(9px, 1.5vw, 12px);
+    letter-spacing: 2px;
+    color: rgba(0, 200, 255, 0);
+    white-space: nowrap;
+
+    transition: color 0.8s ease;
+}
+
+.decode-status-visible {
+    color: rgba(0, 200, 255, 0.5);
+}
+
+.decode-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(0, 255, 100, 0.7);
+    box-shadow: 0 0 8px rgba(0, 255, 100, 0.5);
+    animation: statusBlink 1s ease-in-out infinite;
+}
+
+@keyframes statusBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+.decode-status-progress {
+    color: rgba(0, 255, 150, 0.6);
+    font-weight: 700;
+}
+
+/* ================================================================ */
+/* 📝 NAME CONTAINER                                                */
+/* ================================================================ */
+.decode-name-container {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+.decode-name-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+/* ================================================================ */
+/* 🔤 DECODE LABEL                                                  */
+/* ================================================================ */
+.decode-label {
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: clamp(8px, 1.2vw, 11px);
+    letter-spacing: 3px;
+    color: rgba(0, 200, 255, 0);
+    transition: color 0.8s ease;
+}
+
+.decode-label-visible {
+    color: rgba(0, 200, 255, 0.5);
+    animation: labelGlow 2s ease-in-out infinite;
+}
+
+@keyframes labelGlow {
+    0%, 100% { text-shadow: 0 0 5px rgba(0, 200, 255, 0.2); }
+    50% { text-shadow: 0 0 15px rgba(0, 200, 255, 0.5); }
+}
+
+/* ================================================================ */
+/* ✨ INDIVIDUAL LETTER STYLES                                      */
+/* ================================================================ */
+.decode-letter {
+    display: inline-block;
+    font-family: 'Orbitron', 'Share Tech Mono', monospace;
+    font-weight: 800;
+    font-size: clamp(24px, 6.5vw, 80px);
+    letter-spacing: clamp(2px, 0.5vw, 6px);
+    color: rgba(40, 60, 80, 0.4);
+    position: relative;
+    will-change: transform, color, text-shadow;
+    transition: color 0.3s ease,
+                text-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.decode-space {
+    width: clamp(10px, 2.5vw, 25px);
+}
+
+/* ✅ Scrambling State — Dim blue flickering */
+.decode-scrambling {
+    color: rgba(0, 140, 200, 0.35);
+    text-shadow: 0 0 4px rgba(0, 180, 255, 0.15);
+    animation: scrambleFlicker 0.1s steps(1) infinite;
+}
+
+@keyframes scrambleFlicker {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
+
+/* ✅ LOCKED State — Silver Chrome Metallic */
+.decode-locked {
+    /* Silver/Chrome Metallic Gradient */
+    background: linear-gradient(
+        180deg,
+        #e8eaef 0%,
+        #ffffff 20%,
+        #c8ccd5 40%,
+        #a0a8b8 50%,
+        #d0d4de 60%,
+        #ffffff 75%,
+        #b8bcc8 90%,
+        #8890a0 100%
+    );
+    background-size: 100% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    filter: drop-shadow(0 0 6px rgba(180, 200, 240, 0.3))
+            drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+
+    animation: metallicPulse 4s ease-in-out infinite;
+    transform: scale(1);
+}
+
+@keyframes metallicPulse {
+    0%, 100% {
+        background-position: 0% 0%;
+        filter: drop-shadow(0 0 6px rgba(180, 200, 240, 0.3))
+                drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+    }
+    50% {
+        background-position: 0% 100%;
+        filter: drop-shadow(0 0 12px rgba(180, 200, 240, 0.5))
+                drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+    }
+}
+
+/* ✅ FLASH State — Electric blue burst when letter locks */
+.decode-flash {
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #80d0ff 30%,
+        #ffffff 50%,
+        #80d0ff 70%,
+        #ffffff 100%
+    ) !important;
+    background-size: 100% 100% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+
+    filter: drop-shadow(0 0 25px rgba(0, 200, 255, 1))
+            drop-shadow(0 0 50px rgba(0, 150, 255, 0.7))
+            drop-shadow(0 0 80px rgba(0, 100, 255, 0.4)) !important;
+
+    transform: scale(1.15) !important;
+    transition: all 0.15s ease !important;
+}
+
+/* ✅ SHINE State — Final glory sweep */
+.decode-shine {
+    animation: decodeShineWave 1.2s ease forwards,
+               metallicPulse 4s ease-in-out infinite 1.2s !important;
+}
+
+@keyframes decodeShineWave {
+    0% {
+        filter: drop-shadow(0 0 6px rgba(180, 200, 240, 0.3))
+                drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+    }
+    40% {
+        filter: drop-shadow(0 0 30px rgba(200, 220, 255, 1))
+                drop-shadow(0 0 60px rgba(150, 180, 255, 0.6))
+                drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+
+        background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #ffffff 40%,
+            #e0e4ef 60%,
+            #ffffff 80%,
+            #d0d4de 100%
+        );
+        background-size: 100% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    100% {
+        filter: drop-shadow(0 0 10px rgba(180, 200, 240, 0.4))
+                drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+    }
+}
+
+/* ================================================================ */
+/* 📄 SUBTITLE                                                      */
+/* ================================================================ */
+.decode-subtitle {
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: clamp(9px, 1.8vw, 15px);
+    font-weight: 400;
+    letter-spacing: clamp(3px, 1vw, 10px);
+    color: rgba(0, 200, 255, 0);
+    transition: all 1.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.decode-subtitle-visible {
+    color: rgba(0, 200, 255, 0.6);
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+}
+
+.decode-subtitle-bracket {
+    color: rgba(0, 255, 150, 0.5);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+/* ================================================================ */
+/* ➖ BOTTOM ACCENT LINE                                            */
+/* ================================================================ */
+.decode-bottom-line {
+    width: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 180, 255, 0.4),
+        transparent
+    );
+    box-shadow: 0 0 8px rgba(0, 180, 255, 0.2);
+    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    margin-top: 8px;
+}
+
+.decode-bottom-line-visible {
+    width: clamp(200px, 50vw, 500px);
+}
+
+/* ================================================================ */
+/* 🔵 BACKGROUND ORBS                                               */
+/* ================================================================ */
+.decode-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(80px);
+}
+
+.decode-orb-1 {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    left: -5%;
+    background: radial-gradient(
+        circle,
+        rgba(0, 80, 200, 0.08) 0%,
+        transparent 70%
+    );
+    animation: orbFloat1 10s ease-in-out infinite;
+}
+
+.decode-orb-2 {
+    width: 250px;
+    height: 250px;
+    bottom: 15%;
+    right: -5%;
+    background: radial-gradient(
+        circle,
+        rgba(0, 100, 180, 0.06) 0%,
+        transparent 70%
+    );
+    animation: orbFloat2 12s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -20px); }
+}
+
+@keyframes orbFloat2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-25px, 25px); }
+}
+
+/* ================================================================ */
+/* 📱 TAP HINT                                                      */
+/* ================================================================ */
+.decode-tap-hint {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: rgba(0, 180, 255, 0.3);
+    animation: hintFade 2s ease-in-out infinite;
+}
+
+@keyframes hintFade {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.6; }
+}
+
+/* ================================================================ */
+/* 🖥️ RESPONSIVE                                                    */
+/* ================================================================ */
+
+/* ✅ Mobile Portrait */
+@media (max-width: 480px) {
+    .decode-letter {
+        font-size: clamp(20px, 6vw, 30px);
+        letter-spacing: 1px;
+    }
+
+    .decode-subtitle {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .decode-status-bar {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .decode-corner {
+        width: 18px;
+        height: 18px;
+    }
+
+    .decode-h-line-expand {
+        width: 90%;
+    }
+
+    .decode-name-container {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .decode-orb-1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .decode-orb-2 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .decode-label {
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+}
+
+/* ✅ Mobile Landscape */
+@media (max-width: 767px) and (orientation: landscape) {
+    .decode-letter {
+        font-size: clamp(18px, 3.5vw, 35px);
+    }
+
+    .decode-corner {
+        display: none;
+    }
+}
+
+/* ✅ Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    .decode-letter {
+        font-size: clamp(28px, 5vw, 45px);
+        letter-spacing: 3px;
+    }
+
+    .decode-subtitle {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+}
+
+/* ✅ Small Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .decode-letter {
+        font-size: clamp(40px, 5.5vw, 60px);
+        letter-spacing: 4px;
+    }
+
+    .decode-subtitle {
+        font-size: 12px;
+        letter-spacing: 6px;
+    }
+}
+
+/* ✅ Desktop */
+@media (min-width: 1025px) {
+    .decode-letter {
+        font-size: clamp(55px, 6.5vw, 80px);
+        letter-spacing: 6px;
+    }
+
+    .decode-subtitle {
+        font-size: 15px;
+        letter-spacing: 10px;
+    }
+}
+
+/* ================================================================ */
+/* ⚡ REDUCED MOTION                                                */
+/* ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .decode-letter,
+    .decode-overlay,
+    .decode-grid-bg,
+    .decode-orb,
+    .decode-h-line,
+    .decode-corner {
+        animation: none !important;
+        transition-duration: 0.1s !important;
+    }
+
+    .decode-scrambling {
+        animation: none !important;
+        opacity: 0.5 !important;
+    }
+
+    .decode-scanlines {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================ */
+/* 🖱️ WAITING SCREEN — Click to Reveal                              */
+/* ================================================================ */
+
+.decode-waiting-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* ✅ Pulsing Rings */
+.decode-click-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 200, 255, 0.15);
+    animation: clickRingPulse 3s ease-in-out infinite;
+}
+
+.decode-click-ring-outer {
+    width: 180px;
+    height: 180px;
+    border-color: rgba(0, 200, 255, 0.1);
+    animation-delay: 0s;
+}
+
+.decode-click-ring-middle {
+    width: 120px;
+    height: 120px;
+    border-color: rgba(0, 200, 255, 0.2);
+    animation-delay: 0.5s;
+}
+
+@keyframes clickRingPulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.3;
+    }
+}
+
+/* ✅ Click Icon */
+.decode-click-icon {
+    position: relative;
+    z-index: 2;
+    animation: clickIconFloat 2.5s ease-in-out infinite;
+}
+
+.decode-click-svg {
+    filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.4))
+            drop-shadow(0 0 20px rgba(0, 200, 255, 0.2));
+}
+
+@keyframes clickIconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ✅ Click Text */
+.decode-click-text {
+    font-family: 'Orbitron', 'Share Tech Mono', monospace;
+    font-size: clamp(11px, 2.5vw, 16px);
+    font-weight: 600;
+    letter-spacing: clamp(3px, 1vw, 8px);
+    color: rgba(0, 200, 255, 0.6);
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+    animation: clickTextPulse 2s ease-in-out infinite;
+    text-align: center;
+    padding: 0 20px;
+}
+
+@keyframes clickTextPulse {
+    0%, 100% {
+        opacity: 0.5;
+        text-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(0, 200, 255, 0.5),
+                     0 0 40px rgba(0, 200, 255, 0.2);
+    }
+}
+
+/* ✅ Sound Hint */
+.decode-click-hint {
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: clamp(8px, 1.5vw, 11px);
+    letter-spacing: 2px;
+    color: rgba(150, 170, 200, 0.35);
+    text-align: center;
+    padding: 0 20px;
+    animation: hintFade 3s ease-in-out infinite;
+}
+
+/* ✅ Mobile Responsive — Waiting Screen */
+@media (max-width: 480px) {
+    .decode-click-ring-outer {
+        width: 140px;
+        height: 140px;
+    }
+
+    .decode-click-ring-middle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .decode-click-svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .decode-click-text {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .decode-click-hint {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .decode-waiting-screen {
+        gap: 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .decode-click-ring-outer {
+        width: 160px;
+        height: 160px;
+    }
+
+    .decode-click-ring-middle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .decode-click-text {
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+}

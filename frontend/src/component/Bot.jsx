@@ -2,10 +2,24 @@ import React, { useEffect, useState, useRef, useCallback } from 'react'
 import axios from 'axios'
 import useSound from '../hooks/useSound';
 import CustomCursor from './CustomCursor';
+import CinematicOverlay from './CinematicOverlay';
 
 function Bot() {
 
     const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4002";
+
+    const [showOverlay, setShowOverlay] = useState( () => {
+        
+        // Show overlay only once per session
+
+        const hasSeenOverlay = sessionStorage.getItem('overlayShown')
+        return !hasSeenOverlay
+    })
+
+    const handleOverlayComplete = useCallback( () => {
+        setShowOverlay(false)
+        sessionStorage.setItem('overlayShown', 'true')
+    }, [])
 
     // ✅ Load messages from sessionStorage (persists on refresh, clears on tab close)
     const [messages, setMessages] = useState(() => {
@@ -571,6 +585,12 @@ function Bot() {
         <div className='flex flex-col min-h-screen text-white'
             style={{ background: '#ffffff' }}
         >
+
+            {/* Cinematic Overlay - Shows FIRST, then reveals Bot */}
+
+            {showOverlay && (
+                <CinematicOverlay onComplete={handleOverlayComplete} />
+            )}
 
             <CustomCursor />
             {/* ============================== */}
