@@ -517,18 +517,9 @@ in the Software without restriction...
 Feel free to reach out for collaboration, opportunities, or any queries.
 
 - 📧 **Email:** arshadshaik641@gmail.com  
-- 💼 **GitHub:** https://github.com/YOUR_USERNAME  
-- 🔗 **LinkedIn:** https://linkedin.com/in/YOUR_PROFILE
+- 💼 **GitHub:** https://github.com/Arshad-Shaik 
+- 🔗 **LinkedIn:** https://www.linkedin.com/in/arshadshaik41ashu
 
-
-
-## 📧 Contact
-
-📬 Open to opportunities and collaborations.
-
-- 📧 Email: arshadshaik641@gmail.com  
-- 💼 GitHub: https://github.com/YOUR_USERNAME  
-- 🔗 LinkedIn: https://linkedin.com/in/YOUR_PROFILE
 
 
 
