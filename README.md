@@ -420,3 +420,61 @@ See [Docker Section](https://docker-curriculum.com/) below for full details.
 
 # 🚀 Vercel Deployment
 See [Vercel Section](https://vercel.com/docs/deployments) below for full details.
+
+
+# 📸 Screenshots
+## Welcome Screen
+
+- 🤖 Holographic welcome with TypeWriter effect
+
+## Chat Interface
+
+- 🤖 User and Bot messages with timestamps
+
+## Robot Avatar with Thread
+
+- 🤖 Green glowing thread with email label
+
+## Thinking Animation
+
+- 🤖 Bouncing dots with gradient text
+
+
+# 🔧 Troubleshooting
+
+## ❗ req.body is undefined
+👉 Add this before your routes:
+```js
+app.use(express.json());
+`
+
+##❗ White blank page
+👉 Check browser console (F12)
+👉 Verify App.jsx correctly imports Bot
+
+## ❗ preamble error
+👉 Move CSS from <style> tag
+👉 Use a separate .css file
+
+## ❗ CORS error
+👉 Install and enable CORS in backend:
+
+- npm install cors
+
+- app.use(cors());
+
+##❗ MongoDB connection failed
+👉 Check .env file → MONGO_URI
+👉 Whitelist your IP in MongoDB Atlas
+
+## ❗ RFC snippet not working
+👉 Install VS Code extension:
+ES7+ React/Redux Snippets
+
+## ❗ PowerShell npm error
+👉 Run this command:
+- Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+## ❗ Speech not working
+👉 Speech API requires user interaction (click)
+👉 It will NOT work on autoplay
