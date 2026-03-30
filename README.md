@@ -232,12 +232,68 @@ Before running this project, make sure you have the following installed:
 | Postman | Latest | [postman.com](https://www.postman.com/) |
 | Docker (Optional) | v24.x or higher | [docker.com](https://www.docker.com/) |
 
-### Verify Installation:
+## Verify Installation:
 
 node -v          # Should show v20.x.x or higher
 npm -v           # Should show v10.x.x or higher
 git --version    # Should show git version 2.x.x
 docker --version # (Optional) Should show Docker version 24.x.x
+
+
+
+## ✅ Verify Installation
+
+> **Ensure all required tools are installed by running these commands in your terminal:**
+
+<table>
+<tr>
+<th align="center">🔧 Tool</th>
+<th align="center">💻 Command</th>
+<th align="center">📋 Expected Output</th>
+<th align="center">📌 Status</th>
+</tr>
+
+<tr>
+<td align="center">
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+</td>
+<td>
+
+```bash
+node -v
+
+</td> <td>
+
+v20.x.x or higher
+
+</td> <td align="center">🟢 Required</td> </tr><tr> <td align="center"> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" /> </td> <td
+
+npm -v
+
+</td> <td>
+
+v10.x.x or higher
+
+</td> <td align="center">🟢 Required</td> </tr><tr> <td align="center"> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" /> </td> <td>
+
+git --version
+
+</td> <td>
+
+git version 2.x.x
+
+</td> <td align="center">🟢 Required</td> </tr><tr> <td align="center"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /> </td> <td>
+
+docker --version
+
+</td> <td>
+
+Docker version 24.x.x
+
+</td> <td align="center">🟡 Optional</td> </tr></table>
+
+
+
 
 
 # 🚀 Installation & Setup
