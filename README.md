@@ -213,7 +213,7 @@
 
 ## 📁 Folder Structure
 
-![Folder Structure](image.png)
+![Folder Structure](image-9.png)
 
 
 ---
