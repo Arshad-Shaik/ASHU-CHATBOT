@@ -522,6 +522,14 @@ Feel free to reach out for collaboration, opportunities, or any queries.
 
 
 
+## 📧 Contact
+
+📬 Open to opportunities and collaborations.
+
+- 📧 Email: arshadshaik641@gmail.com  
+- 💼 GitHub: https://github.com/YOUR_USERNAME  
+- 🔗 LinkedIn: https://linkedin.com/in/YOUR_PROFILE
+
 
 
 
