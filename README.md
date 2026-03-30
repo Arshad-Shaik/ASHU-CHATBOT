@@ -408,6 +408,8 @@ Value:    application/json
 # Animations
 ![Animations](image-8.png)
 
-# 
+# 🐳 Docker Deployment
+See [Docker Section](https://docker-curriculum.com/) below for full details.
 
-
+# 🚀 Vercel Deployment
+See [Vercel Section](https://vercel.com/docs/deployments) below for full details.
