@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import axios from 'axios'
 import useSound from '../hooks/useSound';
+import CustomCursor from './CustomCursor';
 
 function Bot() {
 
@@ -570,6 +571,8 @@ function Bot() {
         <div className='flex flex-col min-h-screen text-white'
             style={{ background: '#ffffff' }}
         >
+
+            <CustomCursor />
             {/* ============================== */}
             {/* HEADER */}
             {/* ============================== */}

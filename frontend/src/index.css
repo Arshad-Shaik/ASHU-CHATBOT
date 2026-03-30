@@ -1,3 +1,338 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+/* ================================================================ */
+/* 🖱️ CUSTOM HOLOGRAPHIC CURSOR — by Arshad Wasib Shaik            */
+/* ================================================================ */
+
+/* ✅ Hide default cursor on desktop */
+@media (pointer: fine) {
+    *,
+    *::before,
+    *::after {
+        cursor: none !important;
+    }
+}
+
+/* ✅ Trail Canvas — Full screen overlay */
+.cursor-trail-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9997;
+    will-change: transform;
+}
+
+/* ================================================================ */
+/* 🔵 MAIN CURSOR DOT — Holographic Core                           */
+/* ================================================================ */
+.custom-cursor-dot {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform;
+    transition: width 0.3s ease,
+                height 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+
+    /* Holographic gradient core */
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(0, 200, 255, 0.9) 30%,
+        rgba(100, 0, 255, 0.7) 60%,
+        rgba(255, 0, 150, 0.4) 80%,
+        transparent 100%
+    );
+
+    /* Multi-layered holographic glow */
+    box-shadow:
+        0 0 6px rgba(0, 200, 255, 0.9),
+        0 0 12px rgba(0, 200, 255, 0.6),
+        0 0 20px rgba(100, 0, 255, 0.4),
+        0 0 35px rgba(255, 0, 150, 0.2),
+        inset 0 0 4px rgba(255, 255, 255, 0.8);
+
+    /* Holographic color shift animation */
+    animation: cursorHoloShift 3s ease-in-out infinite;
+}
+
+/* ✅ Dot — Hover State (expands + color change) */
+.custom-cursor-dot.cursor-hover {
+    width: 16px;
+    height: 16px;
+    top: -8px;
+    left: -8px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(0, 255, 150, 0.9) 40%,
+        rgba(0, 200, 255, 0.6) 70%,
+        transparent 100%
+    );
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 150, 1),
+        0 0 20px rgba(0, 255, 150, 0.6),
+        0 0 40px rgba(0, 200, 255, 0.3),
+        inset 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
+/* ✅ Dot — Click State (shrinks + intense glow) */
+.custom-cursor-dot.cursor-click {
+    width: 6px;
+    height: 6px;
+    top: -3px;
+    left: -3px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 50, 50, 0.9) 50%,
+        transparent 100%
+    );
+
+    box-shadow:
+        0 0 15px rgba(255, 50, 50, 1),
+        0 0 30px rgba(255, 100, 0, 0.6),
+        0 0 50px rgba(255, 50, 50, 0.3);
+}
+
+/* ================================================================ */
+/* 🔴 CURSOR RING — Elastic Following Ring                          */
+/* ================================================================ */
+.custom-cursor-ring {
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    will-change: transform;
+    transition: border-color 0.4s ease,
+                box-shadow 0.4s ease,
+                background 0.4s ease;
+
+    /* Holographic ring border */
+    border: 1.5px solid rgba(0, 200, 255, 0.5);
+
+    /* Subtle inner glow */
+    background: radial-gradient(
+        circle,
+        rgba(0, 200, 255, 0.03) 0%,
+        rgba(100, 0, 255, 0.02) 50%,
+        transparent 70%
+    );
+
+    /* Outer glow */
+    box-shadow:
+        0 0 8px rgba(0, 200, 255, 0.2),
+        0 0 20px rgba(100, 0, 255, 0.1),
+        inset 0 0 8px rgba(0, 200, 255, 0.05);
+
+    /* Ring rotation animation */
+    animation: cursorRingRotate 4s linear infinite;
+}
+
+/* ✅ Ring — Hover State */
+.custom-cursor-ring.ring-hover {
+    border-color: rgba(0, 255, 150, 0.7);
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 255, 150, 0.06) 0%,
+        rgba(0, 200, 255, 0.03) 50%,
+        transparent 70%
+    );
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 150, 0.4),
+        0 0 25px rgba(0, 255, 150, 0.15),
+        inset 0 0 10px rgba(0, 255, 150, 0.08);
+}
+
+/* ✅ Ring — Click State */
+.custom-cursor-ring.ring-click {
+    border-color: rgba(255, 50, 50, 0.8);
+
+    box-shadow:
+        0 0 15px rgba(255, 50, 50, 0.5),
+        0 0 30px rgba(255, 100, 0, 0.2),
+        inset 0 0 10px rgba(255, 50, 50, 0.1);
+}
+
+/* ================================================================ */
+/* 🌈 HOLOGRAPHIC COLOR SHIFT ANIMATION                             */
+/* ================================================================ */
+@keyframes cursorHoloShift {
+    0% {
+        filter: hue-rotate(0deg) brightness(1);
+    }
+    25% {
+        filter: hue-rotate(60deg) brightness(1.1);
+    }
+    50% {
+        filter: hue-rotate(180deg) brightness(1.2);
+    }
+    75% {
+        filter: hue-rotate(270deg) brightness(1.1);
+    }
+    100% {
+        filter: hue-rotate(360deg) brightness(1);
+    }
+}
+
+/* ================================================================ */
+/* 🔄 RING ROTATION ANIMATION                                      */
+/* ================================================================ */
+@keyframes cursorRingRotate {
+    0% {
+        border-color: rgba(0, 200, 255, 0.5);
+        filter: hue-rotate(0deg);
+    }
+    33% {
+        border-color: rgba(150, 0, 255, 0.5);
+        filter: hue-rotate(120deg);
+    }
+    66% {
+        border-color: rgba(255, 0, 150, 0.5);
+        filter: hue-rotate(240deg);
+    }
+    100% {
+        border-color: rgba(0, 200, 255, 0.5);
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* ================================================================ */
+/* 📱 TOUCH RIPPLE EFFECT — Mobile Devices                          */
+/* ================================================================ */
+.touch-ripple-effect {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    animation: touchRippleExpand 0.8s ease-out forwards;
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 200, 255, 0.4) 0%,
+        rgba(100, 0, 255, 0.2) 40%,
+        rgba(255, 0, 150, 0.1) 70%,
+        transparent 100%
+    );
+
+    box-shadow:
+        0 0 10px rgba(0, 200, 255, 0.3),
+        0 0 20px rgba(100, 0, 255, 0.15);
+}
+
+@keyframes touchRippleExpand {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+    }
+}
+
+/* ================================================================ */
+/* 🖥️ RESPONSIVE — Device-Specific Optimizations                   */
+/* ================================================================ */
+
+/* ✅ Mobile — Show default cursor, enable touch ripple */
+@media (pointer: coarse) {
+    *,
+    *::before,
+    *::after {
+        cursor: auto !important;
+    }
+
+    .custom-cursor-dot,
+    .custom-cursor-ring,
+    .cursor-trail-canvas {
+        display: none !important;
+    }
+}
+
+/* ✅ Tablets — Reduced effects */
+@media (pointer: fine) and (max-width: 1024px) {
+    .custom-cursor-ring {
+        width: 30px;
+        height: 30px;
+        top: -15px;
+        left: -15px;
+        border-width: 1px;
+    }
+
+    .custom-cursor-dot {
+        width: 8px;
+        height: 8px;
+        top: -4px;
+        left: -4px;
+    }
+}
+
+/* ✅ Large Desktops — Full effects */
+@media (pointer: fine) and (min-width: 1025px) {
+    .custom-cursor-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .custom-cursor-ring {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ================================================================ */
+/* ⚡ PERFORMANCE — Reduce Motion for Accessibility                 */
+/* ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .cursor-trail-canvas {
+        display: none !important;
+    }
+
+    .touch-ripple-effect {
+        animation-duration: 0.3s !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        cursor: auto !important;
+    }
+}
