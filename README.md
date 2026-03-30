@@ -521,9 +521,6 @@ Feel free to reach out for collaboration, opportunities, or any queries.
 - 🔗 **LinkedIn:** https://www.linkedin.com/in/arshadshaik41ashu
 
 
-
-<br><br>
-<br><br>
 <br><br>
 
 
