@@ -462,7 +462,7 @@ app.use(express.json());
 
 - app.use(cors());
 
-##❗ MongoDB connection failed
+## ❗ MongoDB connection failed
 👉 Check .env file → MONGO_URI
 👉 Whitelist your IP in MongoDB Atlas
 
