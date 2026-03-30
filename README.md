@@ -234,11 +234,17 @@ Before running this project, make sure you have the following installed:
 
 ## Verify Installation:
 
-- node -v          # Should show v20.x.x or higher
-- npm -v           # Should show v10.x.x or higher
-- git --version    # Should show git version 2.x.x
-- docker --version # (Optional) Should show Docker version 24.x.x
+- node -v          
+### Should show v20.x.x or higher
 
+- npm -v           
+### Should show v10.x.x or higher
+
+- git --version    
+### Should show git version 2.x.x
+
+- docker --version 
+### (Optional) Should show Docker version 24.x.x
 
 
 # 🚀 Installation & Setup
