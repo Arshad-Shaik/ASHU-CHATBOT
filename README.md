@@ -781,20 +781,12 @@ http://localhost:4002/bot/v1
 ![Endpoints](image-3.png)
 
 ## Request Format:
-POST /bot/v1/message HTTP/1.1
-Host: localhost:4002
-Content-Type: application/json
 
-{
-    "text": "what is react"
-}
+![Request Format](image-12.png)
 
 ## Success Response (200 OK):
-{
-    "success": true,
-    "userMessage": "what is react",
-    "botMessage": "React.js is a JavaScript library for building user interfaces, developed by Facebook (Meta).\n• Component-based architecture...\n• Uses Virtual DOM for efficient re-rendering..."
-}
+
+![Success Response](image-13.png)
 
 ## Error Responses:
 ![Error-Responses](image-4.png)
@@ -805,34 +797,25 @@ Content-Type: application/json
 ## Step 1: Download & Install Postman
 Download from: https://www.postman.com/downloads/ 
 
-### or else - use Postman Extension via VS Code -> Just search in extensions tab from your left panel and search 'Postman' click on Install and use it, create new request and test your Backend API.
+** or else - use Postman Extension via VS Code -> Just search in extensions tab from your left panel and search 'Postman' click on Install and use it, create new request and test your Backend API. **
 
 ## Step 2: Create a New Request
-Method:   POST
-URL:      http://localhost:4002/bot/v1/message
+- Method:   POST
+- URL:      http://localhost:4002/bot/v1/message
 
 ## Step 3: Set Headers
-Key:      Content-Type
-Value:    application/json
+- Key:      Content-Type
+- Value:    application/json
 
 ## Step 4: Set Body
-→ Select "Body" tab
-→ Select "raw"
-→ Select "JSON" from dropdown
-→ Enter:
 
-{
-    "text": "hello"
-}
+![Set Body](image-16.png)
 
 ## Step 5: Click "Send"
 
 ## Step 6: Verify Response
-{
-    "success": true,
-    "userMessage": "hello",
-    "botMessage": "Hi, How I can help you!!"
-}
+
+![Verify Response](image-15.png)
 
 ## Test Cases:
 ![Test Cases](image-5.png)
