@@ -21,7 +21,7 @@
 
 [Live Demo](#-live-demo) • [Features](#-features) • [Tech Stack](#-tech-stack) • [Installation](#-installation) • [API Documentation](#-api-documentation) • [Docker](#-docker-deployment) • [Contributing](#-contributing)
 
-</div>
+
 
 ---
 
@@ -62,7 +62,7 @@
 
 > **ASHU-CHATBOT is powered by a curated knowledge base spanning 100+ topics across 12 categories:**
 
-<div align="center">
+
 
 ### 💻 Programming Languages
 
@@ -212,7 +212,7 @@
 
 # ✨ Unique Features & Innovations
 
-> **Every feature below was conceptualized, designed, and developed by [Arshad Wasib Shaik](https://github.com/yourusername) — original ideas never seen before.**
+> **Every feature below was conceptualized, designed, and developed by [Arshad Wasib Shaik](https://github.com/arshad-shaik) — original ideas never seen before.**
 
 ### 🎬 1. Cinematic Matrix Decode Intro
 
@@ -469,7 +469,7 @@
 
 > **Every feature is tested and optimized for all screen sizes and device types:**
 
-<div align="center">
+
 
 | Feature | 📲 Mobile | 📱 Tablet | 💻 Laptop | 🖥️ Desktop |
 |:--------|:---------:|:---------:|:---------:|:----------:|
@@ -483,12 +483,12 @@
 | ⌨️ TypeWriter Effect | ✅ | ✅ | ✅ | ✅ |
 | 🧵 Hanging Thread | ✅ | ✅ | ✅ | ✅ |
 
-</div>
+
 
 
 ## 🎨 Design Philosophy
 
-<div align="center">
+
 
 | Principle | Implementation |
 |:----------|:---------------|
@@ -505,7 +505,7 @@
 </div>
 
 
-<div align="left>
+
 
 ### 🌟 What Makes This Project Unique?
 
@@ -631,7 +631,7 @@
 ![dotenv](https://img.shields.io/badge/dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)
 ![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)
 
-</div>
+
 
 # 👨‍💻 Author & Credits
 
@@ -648,7 +648,7 @@
 >
 > — **Arshad Wasib Shaik**
 
-<div align="left">
+
 
 ## 🏗️ Project Architecture
 
@@ -862,9 +862,6 @@ See [Docker Section](https://docker-curriculum.com/) below for full details.
 See [Vercel Section](https://vercel.com/docs/deployments) below for full details.
 
 
-</div>
-
-<div align="left">
 
 # 📸 Screenshots
 ## Welcome Screen
@@ -883,10 +880,7 @@ See [Vercel Section](https://vercel.com/docs/deployments) below for full details
 
 - 🤖 Bouncing dots with gradient text
 
-</div>
 
-
-<div align="left">
 
 # 🔧 Troubleshooting
 
@@ -926,10 +920,7 @@ ES7+ React/Redux Snippets
 👉 Speech API requires user interaction (click)
 👉 It will NOT work on autoplay
 
-</div>
 
-
-<div align="left">
 
 # 🚀 Future Enhancements
  - 🤖 Integrate OpenAI/Gemini API for intelligent responses
@@ -943,10 +934,10 @@ ES7+ React/Redux Snippets
  - 🔔 Push notifications
  - ⚡ WebSocket for real-time messaging
 
-</div>
 
 
-<div align="left">
+
+
 
 # 🤝 Contributing
 ### Contributions are welcome! Follow these steps:
@@ -957,10 +948,10 @@ ES7+ React/Redux Snippets
 - Push to branch (git push origin feature/amazing-feature)
 - Open a Pull Request
 
-</div>
 
 
-<div align="left">
+
+
 
 # 📜 License
 ### This project is licensed under the MIT [License](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) — see the LICENSE file for details.
@@ -971,10 +962,9 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "ASHU-CHATBOT"), to deal
 in the Software without restriction...
 
-</div>
 
 
-<div align="center">
+
 
 ### ⭐ If this project impressed you, give it a star!
 
@@ -984,7 +974,6 @@ in the Software without restriction...
 
 **Made in India 🇮🇳**
 
-</div>
 
 </div>
 
