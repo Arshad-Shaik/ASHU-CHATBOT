@@ -524,20 +524,6 @@
 </div>
 
 
-<div align="center">
-
-### ⭐ If this project impressed you, give it a star!
-
-![Stars](https://img.shields.io/github/stars/yourusername/ashu-chatbot?style=for-the-badge&logo=github&color=gold)
-![Forks](https://img.shields.io/github/forks/yourusername/ashu-chatbot?style=for-the-badge&logo=github&color=silver)
-![Issues](https://img.shields.io/github/issues/yourusername/ashu-chatbot?style=for-the-badge&logo=github&color=red)
-
-**Made in India 🇮🇳**
-
-</div>
-
-
-
 ### 🌟 What Makes This Project Unique?
 
 | Feature | Description |
@@ -967,26 +953,17 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction...
 
-## 📧 Contact
-
-Feel free to reach out for collaboration, opportunities, or any queries.
-
-- 📧 **Email:** arshadshaik641@gmail.com  
-- 💼 **GitHub:** https://github.com/Arshad-Shaik 
-- 🔗 **LinkedIn:** https://www.linkedin.com/in/arshadshaik41ashu
-
-
-<br><br>
-
-
 <div align="center">
-⭐ If you found this project useful, please give it a star!
-Made with ❤️ by Arshad Wasib Shaik known as ASHU
 
-© 2026 All Rights Reserved — Arshad Wasib Shaik
+### ⭐ If this project impressed you, give it a star!
+
+![Stars](https://img.shields.io/github/stars/arshad-shaik/ashu-chatbot?style=for-the-badge&logo=github&color=gold)
+![Forks](https://img.shields.io/github/forks/arshad-shaik/ashu-chatbot?style=for-the-badge&logo=github&color=silver)
+![Issues](https://img.shields.io/github/issues/arshad-shaik/ashu-chatbot?style=for-the-badge&logo=github&color=red)
+
+**Made in India 🇮🇳**
 
 </div>
-
 
 
 
