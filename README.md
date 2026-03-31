@@ -541,7 +541,7 @@
 - ✅ User messages with redish holographic background
 - ✅ Bot messages with blueish holographic background
 - ✅ "Ashu-Bot is thinking..." animation with bouncing dots
-- ✅ WhatsApp-style timestamps (12-hour format with am/pm)
+- ✅ timestamps (12-hour format with am/pm)
 - ✅ Robot avatar with speech synthesis (first click only)
 - ✅ Hanging green glowing thread with email label
 - ✅ Session-based chat persistence (survives refresh)
@@ -632,6 +632,7 @@
 ![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)
 
 
+<div align="center">
 
 # 👨‍💻 Author & Credits
 
@@ -648,6 +649,7 @@
 >
 > — **Arshad Wasib Shaik**
 
+</div>
 
 
 ## 🏗️ Project Architecture
