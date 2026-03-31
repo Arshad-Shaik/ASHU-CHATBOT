@@ -538,19 +538,6 @@
 
 
 
-
-
-
-<!-- - 💻 **Programming Languages** (Python, Java, JavaScript, C, C++, TypeScript, etc.)
-- 📊 **Data Structures & Algorithms** (Array, LinkedList, Stack, Queue, Tree, Graph, Sorting, DP, etc.)
-- 🌐 **Web Development** (React.js, Node.js, Express.js, MongoDB, REST API, MERN Stack)
-- 👨‍💼 **IT Tech Roles** (Software Engineer, Frontend/Backend Developer, DevOps, Data Scientist, etc.)
-- 🏛️ **Political Knowledge** (Indian politics, world organizations, government structure)
-- 🏢 **Thinkly Labs** (Company info, services, technologies)
-- 🎤 **Interview Preparation** (HR questions, technical concepts)
-- 🔧 **Tools & Technologies** (Docker, Kubernetes, Git, AWS, CI/CD, etc.)
-- 🧠 **OOP Concepts** (Encapsulation, Inheritance, Polymorphism, Abstraction) -->
-
 ### 🌟 What Makes This Project Unique?
 
 | Feature | Description |
@@ -576,6 +563,8 @@
 | 🖥️ Backend API (Vercel) | [https://ashu-chatbot-api.vercel.app](https://ashu-chatbot-api.vercel.app) |
 
 ---
+
+
 
 ## ✨ Features
 
