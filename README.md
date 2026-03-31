@@ -388,21 +388,11 @@ Value:    application/json
 # 🗄️ Database Schema
 ## Users Collection
 
-{
-    _id: ObjectId("..."),
-    sender: "user",              // String, default: "user"
-    text: "what is react",       // String, required
-    createdAt: ISODate("..."),   // Auto-generated
-    updatedAt: ISODate("...")    // Auto-generated
-}
+![Users Collection](image-10.png)
 
 ## Bots Collection
-{
-    _id: ObjectId("..."),
-    text: "React.js is a JavaScript library...",  // String, required
-    createdAt: ISODate("..."),   // Auto-generated
-    updatedAt: ISODate("...")    // Auto-generated
-}
+
+![Bots Collection](image-11.png)
 
 # 🎨 UI/UX Design Details
 ## Color Palette
