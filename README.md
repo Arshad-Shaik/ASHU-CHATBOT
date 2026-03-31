@@ -650,6 +650,7 @@
 </div>
 
 
+<div align="left">
 
 ## 🏗️ Project Architecture
 
@@ -863,6 +864,10 @@ See [Docker Section](https://docker-curriculum.com/) below for full details.
 See [Vercel Section](https://vercel.com/docs/deployments) below for full details.
 
 
+</div>
+
+<div align="left">
+
 # 📸 Screenshots
 ## Welcome Screen
 
@@ -880,6 +885,10 @@ See [Vercel Section](https://vercel.com/docs/deployments) below for full details
 
 - 🤖 Bouncing dots with gradient text
 
+</div>
+
+
+<div align="left">
 
 # 🔧 Troubleshooting
 
@@ -919,6 +928,10 @@ ES7+ React/Redux Snippets
 👉 Speech API requires user interaction (click)
 👉 It will NOT work on autoplay
 
+</div>
+
+
+<div align="left">
 
 # 🚀 Future Enhancements
  - 🤖 Integrate OpenAI/Gemini API for intelligent responses
@@ -932,6 +945,11 @@ ES7+ React/Redux Snippets
  - 🔔 Push notifications
  - ⚡ WebSocket for real-time messaging
 
+</div>
+
+
+<div align="left">
+
 # 🤝 Contributing
 ### Contributions are welcome! Follow these steps:
 
@@ -940,6 +958,8 @@ ES7+ React/Redux Snippets
 - Commit changes (git commit -m 'Add amazing feature')
 - Push to branch (git push origin feature/amazing-feature)
 - Open a Pull Request
+
+</div>
 
 
 <div align="left">
