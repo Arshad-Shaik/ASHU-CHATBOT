@@ -553,7 +553,7 @@
 | 🖱️ Custom Cursor | Holographic cursor with spark trail effects |
 | 📱 Responsive Design | Works on all screen sizes |
 
----
+
 
 ## 🔗 Live Demo
 
@@ -561,11 +561,6 @@
 |----------|-----|
 | 🌐 Frontend (Vercel) | [https://ashu-chatbot.vercel.app](https://ashu-chatbot.vercel.app) |
 | 🖥️ Backend API (Vercel) | [https://ashu-chatbot-api.vercel.app](https://ashu-chatbot-api.vercel.app) |
-
----
-
-
-
 ## ✨ Features
 
 ### Frontend Features
@@ -596,11 +591,9 @@
 - ✅ Error handling with proper HTTP status codes
 - ✅ Environment variable configuration
 
----
 
 # 🛠️ Tech Stack
 
----
 
 ## 🎨 Frontend
 
@@ -616,7 +609,7 @@
 | <img src="https://img.shields.io/badge/Web_Speech_API-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" /> | **Web Speech API** | `-` | Text-to-Speech synthesis |
 | <img src="https://img.shields.io/badge/Session_Storage-FF6F00?style=for-the-badge&logo=databricks&logoColor=white" /> | **Session Storage** | `-` | Client-side data persistence |
 
----
+
 
 ## ⚙️ Backend
 
@@ -630,7 +623,7 @@
 | <img src="https://img.shields.io/badge/dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black" /> | **dotenv** | `16.x` | Environment variable management |
 | <img src="https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white" /> | **Nodemon** | `3.x` | Auto-restart dev server |
 
----
+
 
 ## 🚀 DevOps & Deployment
 
@@ -643,7 +636,7 @@
 | <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" /> | **Postman** | API testing |
 | <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" /> | **npm** | Package management |
 
----
+
 
 ## 📊 Quick Tech Overview
 
@@ -670,8 +663,7 @@
 
 </div>
 
----
----
+
 
 ## 🏗️ Project Architecture
 
@@ -682,14 +674,14 @@
 
 ![Response Work Flow](image-2.png)
 
----
+
 
 ## 📁 Folder Structure
 
 ![Folder Structure](image-9.png)
 
 
----
+
 
 ## 📋 Prerequisites
 
@@ -769,7 +761,7 @@ MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
 - Replace <password> with your actual password
 - Replace <dbname> with ashu-chatbot
 
----
+
 
 ## ▶️ Running the Application
 ### Start Backend Server:
