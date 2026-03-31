@@ -396,7 +396,7 @@
 
 <table>
 <tr>
-<td width="60%">
+<td width="90%">
 
 **A realistic "thinking" indicator that shows when the bot is processing a response.**
 
@@ -513,7 +513,7 @@
 
 ## **Arshad Wasib Shaik**
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
+[![Arshad-Shaik](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arshad-shaik)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arshadshaik641@gmail.com)
 
@@ -523,6 +523,7 @@
 
 </div>
 
+<div align="left>
 
 ### 🌟 What Makes This Project Unique?
 
@@ -626,7 +627,6 @@
 
 ## 📊 Quick Tech Overview
 
-<div align="center">
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
