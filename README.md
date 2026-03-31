@@ -396,7 +396,7 @@
 
 <table>
 <tr>
-<td width="100%">
+<td width="60%">
 
 **A realistic "thinking" indicator that shows when the bot is processing a response.**
 
