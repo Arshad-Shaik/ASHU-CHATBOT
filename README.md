@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 
 # 🤖 ASHU THE GREAT CHATBOT
 
@@ -983,6 +983,8 @@ in the Software without restriction...
 ![Issues](https://img.shields.io/github/issues/arshad-shaik/ashu-chatbot?style=for-the-badge&logo=github&color=red)
 
 **Made in India 🇮🇳**
+
+</div>
 
 </div>
 
