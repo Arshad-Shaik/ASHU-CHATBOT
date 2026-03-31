@@ -505,24 +505,6 @@
 </div>
 
 
-## 👨‍💻 Author & Credits
-
-<div align="center">
-
-### Designed & Developed with ❤️ by
-
-## **Arshad Wasib Shaik**
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arshad-shaik)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arshadshaik641@gmail.com)
-
-> *"Every animation, every interaction, every pixel — crafted from scratch with original ideas, unique design thinking, and a passion for creating experiences that leave lasting impressions."*
->
-> — **Arshad Wasib Shaik**
-
-</div>
-
 <div align="left>
 
 ### 🌟 What Makes This Project Unique?
@@ -649,9 +631,22 @@
 ![dotenv](https://img.shields.io/badge/dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)
 ![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)
 
-
 </div>
 
+# 👨‍💻 Author & Credits
+
+
+### Designed & Developed with ❤️ by
+
+## **Arshad Wasib Shaik**
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arshad-shaik)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arshadshaik641@gmail.com)
+
+> *"Every animation, every interaction, every pixel — crafted from scratch with original ideas, unique design thinking, and a passion for creating experiences that leave lasting impressions."*
+>
+> — **Arshad Wasib Shaik**
 
 <div align="left">
 
