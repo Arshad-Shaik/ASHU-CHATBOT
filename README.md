@@ -942,16 +942,19 @@ ES7+ React/Redux Snippets
 - Open a Pull Request
 
 
-# 📜 License
-## This project is licensed under the MIT [License](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) — see the LICENSE file for details.
+<div align="left">
 
-MIT License
+# 📜 License
+### This project is licensed under the MIT [License](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) — see the LICENSE file for details.
 
 Copyright (c) 2026 Arshad Wasib Shaik
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "ASHU-CHATBOT"), to deal
 in the Software without restriction...
+
+</div>
+
 
 <div align="center">
 
