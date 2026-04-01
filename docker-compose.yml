@@ -1,0 +1,73 @@
+services:
+  # ============================
+  # MongoDB Database
+  # ============================
+  mongodb:
+    image: mongo:7
+    container_name: ashu-chatbot-db
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - chatbot-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # ============================
+  # Backend API (Node.js + Express)
+  # ============================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ashu-chatbot-backend
+    restart: always
+    ports:
+      - "4002:4002"
+    environment:
+      - PORT=4002
+      - MONGO_URI=mongodb://mongodb:27017/ashu-chatbot
+    env_file:
+      - ./backend/.env
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - chatbot-network
+
+  # ============================
+  # Frontend React App (Nginx)
+  # ============================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://localhost:4002
+    container_name: ashu-chatbot-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - chatbot-network
+
+# ============================
+# Persistent storage for MongoDB
+# ============================
+volumes:
+  mongodb_data:
+
+# ============================
+# Network for containers to communicate
+# ============================
+networks:
+  chatbot-network:
+    driver: bridge
