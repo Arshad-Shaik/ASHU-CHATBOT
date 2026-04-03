@@ -23,9 +23,7 @@
 
 </div>
 
-# Live Video
 
-<video controls src="LScreen Recording 2026-04-02 182949.mp4" title="🤖 ASHU-CHATBOT"></video>
 
 ---
 
